@@ -5,7 +5,9 @@ Basic script that scans pipelines (except YAML), release management and task gro
 ## Pre requirements
 
 node
-run npm install on the main folder go install dependencies
+run npm install on the main folder go install dependencies by issuing the command
+
+> npm install --only=prod
 
 ## Usage
 
