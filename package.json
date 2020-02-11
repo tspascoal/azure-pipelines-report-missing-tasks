@@ -1,0 +1,25 @@
+{
+  "name": "azure-pipelines-report-missing-tasks",
+  "version": "1.0.0",
+  "description": "Gets list of tasks for all pipelines",
+  "main": "get-tasks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc --outdir ."
+  },
+  "author": "Tiago Pascoal",
+  "license": "ISC",
+  "dependencies": {
+    "azure-devops-node-api": "^10.0.0",
+    "colors": "^1.4.0",
+    "yargs": "^15.1.0"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/tspascoal/azure-pipelines-report-missing-tasks"
+  },
+  "devDependencies": {
+    "@types/yargs": "^15.0.1",
+    "@types/node": "^13.1.8"
+  }
+}
