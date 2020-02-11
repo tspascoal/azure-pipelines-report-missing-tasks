@@ -23,7 +23,10 @@ function isTaskInstalled(installedTasks, taskId, versionSpec) {
 function tryGetTaskName(installedTasks, taskId) {
     var _a;
     let taskName = (_a = installedTasks.find(t => { return t.id === taskId; })) === null || _a === void 0 ? void 0 : _a.name;
-    return taskName || taskId;
+    if (taskName) {
+        return `${taskName} ${taskId}`;
+    }
+    return taskId;
 }
 function dumpPipelineMissingTasks(installedTasks, definition, skipOK) {
     let process = definition.process;
@@ -108,7 +111,7 @@ function run(organizationUrl, projectName, skipOK) {
             if (projectName && project.name !== projectName) {
                 continue;
             }
-            common.heading(`Project ${project.name}`);
+            common.heading(`Project: ${project.name}`);
             const pipelines = yield buildApi.getDefinitions(project.id);
             for (var pipelineName in pipelines) {
                 const pipeline = pipelines[pipelineName];

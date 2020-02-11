@@ -27,7 +27,11 @@ function tryGetTaskName(installedTasks: TaskDefinition[], taskId: string) {
 
     let taskName = installedTasks.find(t => { return t.id === taskId })?.name;
 
-    return taskName || taskId;
+    if(taskName) {
+        return `${taskName} ${taskId}`
+    }
+
+    return taskId;
 }
 
 function dumpPipelineMissingTasks(installedTasks: TaskDefinition[], definition: IBuildApi.BuildDefinition, skipOK: boolean) {
@@ -147,7 +151,7 @@ export async function run(organizationUrl: string, projectName: string, skipOK: 
             continue;
         }
 
-        common.heading(`Project ${project.name}`);
+        common.heading(`Project: ${project.name}`);
 
         const pipelines = await buildApi.getDefinitions(project.id);
 
