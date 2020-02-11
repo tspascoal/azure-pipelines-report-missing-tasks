@@ -5,7 +5,7 @@
   "main": "get-tasks.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc --outdir ."
+    "compile": "tsc --outdir . --declarationDir typings"
   },
   "author": "Tiago Pascoal",
   "license": "ISC",
