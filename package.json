@@ -19,7 +19,7 @@
     "url": "https://github.com/tspascoal/azure-pipelines-report-missing-tasks"
   },
   "devDependencies": {
-    "@types/yargs": "^15.0.1",
+    "@types/yargs": "^15.0.11",
     "@types/node": "^14.14.9"
   }
 }
