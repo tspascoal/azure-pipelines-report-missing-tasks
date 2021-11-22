@@ -10,7 +10,7 @@
   "author": "Tiago Pascoal",
   "license": "ISC",
   "dependencies": {
-    "azure-devops-node-api": "^10.2.2",
+    "azure-devops-node-api": "^11.1.0",
     "colors": "^1.4.0",
     "yargs": "^16.2.0"
   },
